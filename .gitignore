@@ -12,3 +12,5 @@ backend/core/__pycache__
 backend/core/migrations/__pycache__
 backend/chat/__pycache__
 backend/chat/migrations/__pycache__
+
+backend/api/__pycache__
