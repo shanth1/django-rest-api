@@ -6,3 +6,6 @@ frontend/node_modules
 
 # misc
 .DS_Store
+
+backend/core/__pycache__
+backend/chat/__pycache__
