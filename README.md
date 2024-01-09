@@ -13,7 +13,7 @@
 -   Django REST framework (drf)
 -   Docker
 -   Docker-compose
--   PostgreSQL
+-   PostgreSQL (не реализовано)
 
 На стороне клиента находится простое приложение на React, которое включает в себя функционал чата, реализованный с использованием соответствующей библиотеки. Серверная часть представлена фреймворками Django и Django REST framework для создания REST API.
 
@@ -28,21 +28,55 @@
 -   [Node.js](https://nodejs.org/)
 -   [Docker](https://www.docker.com/get-started)
 
+Убедитесь, что на вашем компьютере установлен Make
+
+```sh
+make --version
+```
+
+> Если make не установлен, учтите это при запуске проекта
+
 #### Установка проекта
 
 Клонируйте репозиторий на вашу локальную машину:
 
 ```sh
-    git clone https://github.com/shanth1/django-rest-api.git
-    cd django-rest-api
+git clone https://github.com/shanth1/django-rest-api.git
+cd django-rest-api
 ```
 
 #### Запуск проекта
 
-Запустите проект с помощью Docker Compose:
+###### С помощью make
+
+Запустите проект с помощью make скрипта:
 
 ```sh
-    docker-compose up -d
+make up
 ```
 
-Запуск команды создаст и запустит все необходимые контейнеры
+###### Без make
+
+> Убедитесь, что вы находитесь в корне проекта
+
+1. Скопируйте тестовый пример файла окружения
+
+```sh
+cp docker/.example.env docker/.env
+```
+
+2. Соберите build-версию клиента
+
+```sh
+cd frontend && npm run build && cd ..
+```
+
+3. Запустите docker compose в фоновом режиме
+
+```sh
+cd docker && docker compose up -d
+```
+
+#### Использование приложения
+
+Запущенный через docker compose сайт будет доступен на http://0.0.0.0:4000/
