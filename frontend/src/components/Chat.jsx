@@ -5,7 +5,7 @@ export const Chat = () => {
     const [connectedMessage, setConnectedMessage] = useState('');
 
     useEffect(() => {
-        fetch('http://localhost:8000/api/dev/connect')
+        fetch('http://0.0.0.0:8000/api/dev/connect')
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
@@ -25,7 +25,7 @@ export const Chat = () => {
             style={{ borderRadius: '10px' }}
             introMessage={{ text: connectedMessage }}
             request={{
-                url: 'http://localhost:8000/api/dev/send',
+                url: 'http://0.0.0.0:8000/api/dev/send',
                 method: 'POST',
             }}
             requestBodyLimits={{ maxMessages: -1 }}
