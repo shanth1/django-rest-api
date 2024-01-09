@@ -1,5 +1,5 @@
 up:
-	cp docker/.example.env .env
+	cp docker/.example.env docker/.env
 	cd frontend && npm run build
 	cd docker && docker compose up -d   
 
