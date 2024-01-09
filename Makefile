@@ -1,4 +1,5 @@
 up:
+	cd frontend && npm run build
 	docker compose up -d   
 
 stop:
