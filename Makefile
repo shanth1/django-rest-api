@@ -1,6 +1,7 @@
 up:
+	cp docker/.example.env .env
 	cd frontend && npm run build
-	docker compose up -d   
+	cd docker && docker compose up -d   
 
 stop:
 	docker stop django
