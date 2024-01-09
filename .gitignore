@@ -15,4 +15,4 @@ backend/chat/migrations/__pycache__
 
 backend/api/__pycache__
 
-.env
+docker/.env
