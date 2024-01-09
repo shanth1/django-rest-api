@@ -3,7 +3,7 @@
         "info": {
             "_postman_id": "b52604e4-7a5f-47f4-b239-f9efda8d777e",
             "name": "DjangoREST: GET, POST + тесты",
-            "description": "Локально должен быть запуще проект: [https://github.com/shanth1/django-rest-api](https://github.com/shanth1/django-rest-api)",
+            "description": "Локально должен быть запущен проект: [https://github.com/shanth1/django-rest-api](https://github.com/shanth1/django-rest-api)",
             "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
             "updatedAt": "2024-01-09T14:02:44.000Z",
             "uid": "27941721-b52604e4-7a5f-47f4-b239-f9efda8d777e",
